@@ -35,13 +35,13 @@ export default {
   left: 5%;
   width: 90%;
   font-size: 1.5rem;
-  color: black;
-  background-color: rgb(211, 211, 211);
+  color: rgb(211, 211, 211);
+  background-color: #222;
   padding: 10px;
   border-radius: 10px;
   box-shadow: 3px 3px 3px black;
   box-sizing: border-box;
-  border: 1px solid black;
+  border: 2px solid #00ff00;
 }
 
 @media (min-width: 768px) {
