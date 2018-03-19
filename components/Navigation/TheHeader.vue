@@ -50,7 +50,6 @@ export default {
 .logo {
   margin: 0 10px;
   font-size: 1.3rem;
-  color: #00ff00;
 }
 
 .logo a {
@@ -91,6 +90,6 @@ export default {
 .nav-item a:hover,
 .nav-item a:active,
 .nav-item a.nuxt-link-active {
-  color: #00ff00;
+  color: #00FF00;
 }
 </style>

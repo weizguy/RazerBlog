@@ -12,11 +12,11 @@
 
 .error-page a {
   text-decoration: none;
-  color: green;
+  color: red;
 }
 
 .error-page a:hover,
 .error-page a:active {
-  color: #00ff00;
+  color: salmon;
 }
 </style>

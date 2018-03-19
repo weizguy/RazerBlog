@@ -3,18 +3,23 @@
     <section class="intro">
       <h1>Get the latest Razer news!</h1>
     </section>
-    <PostList />
+    <PostList :posts="loadedPosts" />
   </div>
 </template>
 
 <script>
-import PostList from '@/components/Posts/PostList'
+import PostList from "@/components/Posts/PostList";
 
 export default {
   components: {
     PostList
+  },
+  computed: {
+    loadedPosts() {
+      return this.$store.getters.loadedPosts
+    }
   }
-}
+};
 </script>
 
 
@@ -24,7 +29,7 @@ export default {
   position: relative;
   padding: 30px;
   box-sizing: border-box;
-  background-image: url('~assets/images/main-page-background.png');
+  background-image: url("~assets/images/main-page-background.png");
   background-position: center;
   background-size: cover;
 }
@@ -36,12 +41,12 @@ export default {
   width: 90%;
   font-size: 1.5rem;
   color: rgb(211, 211, 211);
-  background-color: #222;
+  background-color: #333;
   padding: 10px;
   border-radius: 10px;
   box-shadow: 3px 3px 3px black;
   box-sizing: border-box;
-  border: 2px solid #00ff00;
+  border: 2px solid #00FF00;
 }
 
 @media (min-width: 768px) {
@@ -58,7 +63,4 @@ export default {
   align-items: center;
   justify-content: center;
 }
-
 </style>
-
-

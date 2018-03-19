@@ -1,18 +1,40 @@
 <template>
   <div class="single-post-page">
-      <section class="post">
-          <h1 class="post-title">Title of the post</h1>
-          <div class="post-details">
-            <div class="post-detail">Last updated on xxx</div>
-            <div class="post-detail">Written by: NAME</div>
-          </div>
-          <p class="post-content">Content of the post</p>
-      </section>
-      <section class="post-feedback">
-          <p>Thoughts? send mail to <a href="mailto:me@there">me@there</a></p>
-      </section>
+    <section class="post">
+      <h1 class="post-title">{{ loadedPost.title }}</h1>
+      <div class="post-details">
+        <div class="post-detail">Last updated on {{ loadedPost.updatedDate }}</div>
+        <div class="post-detail">Written by {{ loadedPost.author }}</div>
+      </div>
+      <p class="post-content">{{ loadedPost.content }}</p>
+    </section>
+    <section class="post-feedback">
+      <p>Let me know what you think about the post, send a mail to <a href="mailto:feedback@my-awesome-domain.com">feedback@my-awesome-domain.com</a>.</p>
+    </section>
   </div>
 </template>
+
+<script>
+export default {
+  asyncData(context, callback) {
+    setTimeout(() => {
+      callback(null, {
+        loadedPost: {
+          id: "1",
+          title: "First Razer Post (ID: " + context.route.params.id + ")",
+          previewText: "This is our first Razer post!",
+          author: 'Sshado',
+          updatedDate: new Date(),
+          content: 'Some dummy text which is definitely not the preview text though!',
+          thumbnail:
+            "https://assets.razerzone.com/eeimages/razer_pages/15506/images/razer-christine-gallery-03.jpg"
+        }
+      });
+    }, 1000);
+  }
+};
+</script>
+
 
 <style scoped>
 .single-post-page {
@@ -58,12 +80,12 @@
 }
 
 .post-feedback a {
-  color: red;
+  color: green;
   text-decoration: none;
 }
 
 .post-feedback a:hover,
 .post-feedback a:active {
-  color: salmon;
+  color: #00FF00;
 }
 </style>

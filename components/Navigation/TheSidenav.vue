@@ -52,7 +52,7 @@ export default {
 .sidenav {
   height: 100%;
   width: 300px;
-  background-color: white;
+  background-color: #333;
   z-index: 10000;
   position: fixed;
   top: 0;
@@ -82,12 +82,12 @@ export default {
 
 .nav-item a {
   text-decoration: none;
-  color: black;
+  color: white;
   font-size: 1.5rem;
 }
 
 .nav-item a:hover,
 .nav-item a:active {
-  color: red;
+  color: #00FF00;
 }
 </style>

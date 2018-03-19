@@ -1,15 +1,15 @@
 <template>
-    <nuxt-link :to="postLink" class="post-preview">
-      <article>
-        <div 
-            class="post-thumbnail" 
-            :style="{backgroundImage: 'url(' + thumbnail + ')'}"></div>
-        <div class="post-content">
-          <h1>{{ title }}</h1>
-          <p>{{ previewText }}</p>
-        </div>
-      </article>
-    </nuxt-link>  
+  <nuxt-link :to="postLink" class="post-preview">
+    <article>
+      <div
+        class="post-thumbnail"
+        :style="{backgroundImage: 'url(' + thumbnail + ')'}"></div>
+      <div class="post-content">
+        <h1>{{ title }}</h1>
+        <p>{{ previewText }}</p>
+      </div>
+    </article>
+  </nuxt-link>
 </template>
 
 <script>
@@ -48,8 +48,8 @@ export default {
 
 <style scoped>
 .post-preview {
-  border: 1px solid #ccc;
-  box-shadow: 0 2px 2px #ccc;
+  border: 1px solid #c00FF00cc;
+  box-shadow: 0 2px 2px #00FF00;
   background-color: white;
   width: 90%;
 }
@@ -80,8 +80,6 @@ a {
 
 a:hover .post-content,
 a:active .post-content {
-  background-color: #ccc;
+  background-color: #00FF00;
 }
 </style>
-
-

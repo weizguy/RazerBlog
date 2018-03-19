@@ -22,7 +22,6 @@ export default {
       displaySidenav: false
     }
   }
-  
 }
 </script>
 
@@ -34,5 +33,7 @@ html {
 
 body {
   margin: 0;
+  color: white;
+  background-color: #333;
 }
 </style>
