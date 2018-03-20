@@ -36,7 +36,7 @@ export default {
 
 .intro h1 {
   position: absolute;
-  top: 10%;
+  top: 0%;
   left: 5%;
   width: 90%;
   font-size: 1.5rem;
