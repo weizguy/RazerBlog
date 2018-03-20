@@ -1,6 +1,6 @@
-# firstNuxt
+# RazerBlog
 
-> My top-notch Nuxt.js project
+> Experimenting with Nuxt - first repo with Nuxt, designing a blog based on Razer products...
 
 ## Build Setup
 
