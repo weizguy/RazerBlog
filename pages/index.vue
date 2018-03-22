@@ -1,7 +1,7 @@
 <template>
   <div class="home-page">
     <section class="intro">
-      <h1>Get the latest tech news!</h1>
+      <h1>The latest Razer tech!</h1>
     </section>
     <PostList :posts="loadedPosts" />
   </div>
@@ -36,9 +36,10 @@ export default {
 
 .intro h1 {
   position: absolute;
+  text-align: center;
   top: 0%;
   left: 5%;
-  width: 90%;
+  width: 300px;
   font-size: 1.5rem;
   color: rgb(211, 211, 211);
   background-color: #333;
@@ -51,7 +52,7 @@ export default {
 
 @media (min-width: 768px) {
   .intro h1 {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 }
 
