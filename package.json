@@ -1,7 +1,7 @@
 {
-  "name": "firstNuxt",
+  "name": "razer-blog",
   "version": "1.0.0",
-  "description": "My top-notch Nuxt.js project",
+  "description": "A blog based on Razer products built using Vue and Nuxt",
   "author": "weizguy",
   "private": true,
   "scripts": {
