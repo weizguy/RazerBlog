@@ -19,7 +19,7 @@ import axios from 'axios'
 
 export default {
   asyncData(context) {
-    return axios.get('https://razerblog-a997a.firebaseio.com/posts/' + context.params.id + '.json')
+    return axios.get(process.env.baseUrl + '/posts/' + context.params.id + '.json')
       .then(res => {
         return {
           loadedPost: res.data
