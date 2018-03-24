@@ -1,5 +1,6 @@
-const pkg = require('./package')
-const bodyParser = require ('body-parser')
+const pkg = require('./package');
+const bodyParser = require ('body-parser');
+const axios = require('axios');
 
 module.exports = {
   mode: 'universal',
@@ -58,9 +59,7 @@ module.exports = {
     /*
     ** You can extend webpack config here
     */
-    extend(config, ctx) {
-      
-    }
+    extend(config, ctx) {}
   },
   env: {
     baseUrl: process.env.BASE_URL || 'https://razerblog-a997a.firebaseio.com',
@@ -76,5 +75,21 @@ module.exports = {
   serverMiddleware: [
     bodyParser.json(),
     '~/api'
-  ]
+  ],
+  generate: {
+    routes: function() {
+      return axios
+        .get('https://razerblog-a997a.firebaseio.com/posts.json')
+        .then(res => {
+          const routes = [];
+          for (const key in res.data) {
+            routes.push({ 
+              route: '/posts/' + key, 
+              payload: {postData: res.data[key]}
+            });
+          }
+          return routes;
+        })
+    }
+  }
 }

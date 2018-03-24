@@ -9,7 +9,7 @@
       <p class="post-content">{{ loadedPost.content }}</p>
     </section>
     <section class="post-feedback">
-      <p>Let me know what you think about the post, send a mail to <a href="mailto:feedback@my-awesome-domain.com">feedback@my-awesome-domain.com</a>.</p>
+      <p>Let me know what you think about the post, send a mail to <a href="mailto:feedback@sshado.com">feedback@sshado.com</a>.</p>
     </section>
   </div>
 </template>
@@ -17,6 +17,11 @@
 <script>
 export default {
   asyncData(context) {
+    if (context.payload) {
+      return {
+        loadedPost: context.payload.postData
+      }
+    }
     return context.app.$axios.$get('/posts/' + context.params.id + '.json')
       .then(data => {
         return {
