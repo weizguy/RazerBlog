@@ -24,6 +24,9 @@ export default {
         }
       })
       .catch(e => context.error(e))
+  },
+  head: {
+    title: 'Razer Blog'
   }
 };
 </script>

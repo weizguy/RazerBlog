@@ -14,7 +14,7 @@ module.exports = {
       { hid: 'description', name: 'description', content: "Latest Razer Tech news" }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '~static/favicon.ico' },
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Open+Sans' }
     ]
   },
@@ -46,7 +46,7 @@ module.exports = {
     '@nuxtjs/axios'
   ],
   axios: {
-    baseURL: process.env.BASE_URL || 'https://razerblog-a997a.firebaseio.com'
+    baseURL: process.env.BASE_URL || 'https://razerblog-a997a.firebaseio.com',
     credentials: false
   },
 
@@ -62,10 +62,14 @@ module.exports = {
     }
   },
   env: {
-    baseUrl: process.env.BASE_URL || 'https://razerblog-a997a.firebaseio.com'
+    baseUrl: process.env.BASE_URL || 'https://razerblog-a997a.firebaseio.com',
+    fbAPIKey: 'AIzaSyAIldt2CUni9U3xTqNDKWlsQ_n-zeSTHVU'
   },
   transition: {
     name: 'fade',
     mode: 'out-in'
-  }
+  }//,
+  // router: {
+  //   middleware: 'log'
+  // }
 }
